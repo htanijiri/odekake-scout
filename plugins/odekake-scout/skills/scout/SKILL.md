@@ -17,31 +17,18 @@ user-invocable: true
 
 ## 家族プロフィール
 
-profile.yml を探して読み込む。以下のコマンドで検索すること:
+以下のコマンドを実行してprofile.ymlを読み込むこと。これは必須ステップである。
 
 ```
-cat profile.yml 2>/dev/null || cat ${CLAUDE_PLUGIN_ROOT}/data/profile.yml 2>/dev/null
+cat profile.yml
 ```
 
-上記コマンドで内容が表示されたら、その内容をプロフィールとして使用する。
+このコマンドでファイルの内容が表示されたら、その内容を家族プロフィールとして使用する。
 
-どちらも見つからない場合のみ、以下のデフォルト値を使用する。
+ファイルが見つからない場合は、以下のメッセージを表示して処理を停止する:
+「profile.yml が見つかりません。カレントディレクトリに profile.yml を作成してください。書き方の例は README.md の「カスタマイズ」セクションを参照してください。」
 
-```yaml
-home_area: 葛飾区
-children:
-  - name: 長男
-    age_group: 小学生
-    interests: [マインクラフト, ポケモン]
-  - name: 次男
-    age_group: 保育園児
-    interests: []
-search_areas: [東京23区, 千葉県, 埼玉県, 茨城県南部, 神奈川県]
-max_travel_time: 片道2時間
-transport:
-  primary: 車
-  prefer_train_when: [都内の近場, 駐車場が不安な場所, 荷物が少ない時]
-```
+デフォルト値は使用しない。必ず profile.yml から読み込むこと。
 
 ## 検索戦略
 
