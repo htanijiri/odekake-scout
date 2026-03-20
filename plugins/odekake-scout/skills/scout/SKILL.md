@@ -17,9 +17,11 @@ user-invocable: true
 
 ## 家族プロフィール
 
-`${CLAUDE_PLUGIN_ROOT}/data/profile.yml` から読み込む。
+以下の優先順位で読み込む。
 
-ファイルが存在しない場合は以下のデフォルト値を使用する。
+1. カレントディレクトリの `profile.yml`
+2. なければ `${CLAUDE_PLUGIN_ROOT}/data/profile.yml`
+3. どちらにもなければ以下のデフォルト値を使用する。
 
 ```yaml
 home_area: 葛飾区

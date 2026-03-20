@@ -1,0 +1,16 @@
+home_area: 葛飾区
+children:
+  - name: 長男
+    age_group: 小学生
+    interests: [マインクラフト]
+  - name: 次男
+    age_group: 保育園児
+    interests: [ポケモン, 危険生物, 未確認生物]
+search_areas: [東京23区, 千葉県, 埼玉県]
+max_travel_time: 片道1時間
+transport:
+  primary: 車
+  prefer_train_when:
+    - 都内の近場
+    - 駐車場が不安な場所
+    - 荷物が少ない時

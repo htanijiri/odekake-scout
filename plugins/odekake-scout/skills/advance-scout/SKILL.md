@@ -16,7 +16,11 @@ user-invocable: true
 
 ## プロフィール参照
 
-`${CLAUDE_PLUGIN_ROOT}/data/profile.yml` を参照する（scoutと同じ）。
+以下の優先順位で参照する（scoutと同じ）。
+
+1. カレントディレクトリの `profile.yml`
+2. なければ `${CLAUDE_PLUGIN_ROOT}/data/profile.yml`
+3. どちらにもなければ scout と同じデフォルト値を使用する。
 
 ## 検索戦略
 
