@@ -14,13 +14,17 @@ user-invocable: true
 
 1〜2ヶ月先に開催される子ども向けイベントのうち、事前予約や抽選申込が必要なものを調査し、予約情報をまとめて出力する。
 
-## プロフィール参照
+## 家族プロフィール
 
-以下の優先順位で参照する（scoutと同じ）。
+profile.yml を探して読み込む。以下のコマンドで検索すること:
 
-1. カレントディレクトリの `profile.yml`
-2. なければ `${CLAUDE_PLUGIN_ROOT}/data/profile.yml`
-3. どちらにもなければ scout と同じデフォルト値を使用する。
+```
+cat profile.yml 2>/dev/null || cat ${CLAUDE_PLUGIN_ROOT}/data/profile.yml 2>/dev/null
+```
+
+上記コマンドで内容が表示されたら、その内容をプロフィールとして使用する。
+
+どちらも見つからない場合のみ、scout と同じデフォルト値を使用する。
 
 ## 検索戦略
 
