@@ -5,7 +5,7 @@ description: >
   「おでかけ調べて」「今週末のイベント」などで起動。
   家族プロフィールを元にエリア別・興味別にWeb検索し、
   結果が少なければクエリを変えてリトライする自律型スキル。
-user-invocable: true
+user-invocable: false
 ---
 
 # scout Skill — 今週末のイベント自動調査
