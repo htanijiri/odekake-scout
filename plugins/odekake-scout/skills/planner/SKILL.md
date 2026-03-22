@@ -35,13 +35,16 @@ cat profile.yml
 
 ## 交通手段の判断ロジック
 
-profile.yml の transport 設定に基づいて自動判断する。
+profile.yml の transport 設定に基づいて判断する。
+
+- primary: メインの交通手段（車 or 電車）
+- secondary: サブの交通手段（省略可）
+- prefer_secondary_when: サブに切り替える条件
 
 判断手順:
-1. 目的地が23区内かつ片道30分以内 → 電車を検討
-2. 目的地周辺の駐車場を Web 検索 → 見つからない or 高額 → 電車
-3. それ以外 → 車
-4. 判断理由を明記する
+1. secondaryが設定されている場合、prefer_secondary_whenの条件に該当すればsecondaryを使用する
+2. secondaryがない場合は常にprimaryを使用する
+3. 判断理由を明記する
 
 ## 各プランに含める内容
 
