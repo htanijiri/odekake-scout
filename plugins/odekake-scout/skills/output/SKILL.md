@@ -1,9 +1,8 @@
 ---
 name: output
 description: >
-  scout・rating・plannerの成果をまとめて、
+  scout・rating・planner・advance-scoutの成果をまとめて、
   見やすいウィークリーレポートとして最終出力する。
-  planner Skillの完了後に自動的に実行される。
 user-invocable: false
 ---
 
